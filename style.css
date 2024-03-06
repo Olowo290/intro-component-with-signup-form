@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  background: url(./images/bg-intro-desktop.png) no-repeat, hsl(0, 100%, 74%);
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  gap: 1em;
+}
+article {
+  flex-basis: 50%;
+  max-width: 600px;
+}
+article:first-child {
+  color: hsl(0, 0%, 100%);
+}
+h1 {
+  font-size: 3.1rem;
+  line-height: 1.2;
+
+  margin-bottom: 0.6em;
+}
+article:first-child p {
+  font-size: 1.2rem;
+}
+.try-free {
+  background: hsl(248, 32%, 49%);
+  border-radius: 5px;
+  color: hsl(0, 0%, 100%);
+  margin: 0 auto;
+  text-align: center;
+  padding: 0.5em;
+  width: 80%;
+  box-shadow: 0px 5px hsla(249, 10%, 26%, 0.4);
+}
+
+.try-free span {
+  font-weight: bold;
+}
+form {
+  width: 80%;
+  margin: 1em auto;
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.5em 1em;
+  border-radius: 5px;
+}
+input {
+  display: block;
+  width: 100%;
+  padding: 0.8em;
+  border: 1px solid hsl(246, 25%, 77%);
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+}
+input:focus {
+  border-color: hsl(249, 10%, 26%) hsl(249, 10%, 26%) hsl(246, 25%, 77%);
+}
+input:not(:last-child) {
+  margin-bottom: 0.8em;
+}
+input::placeholder {
+  font-size: 1rem;
+}
+input[type='submit'] {
+  background-color: hsl(154, 59%, 51%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+.agree-to-terms {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 0.7rem;
+  color: hsl(246, 25%, 77%);
+}
+.agree-to-terms span {
+  color: hsl(0, 100%, 74%);
+  font-weight: bold;
+}
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+.attribution a {
+  color: hsl(248, 32%, 49%);
+  text-decoration: none;
+}
+/* pad */
+@media screen and (width < 790px) {
+  h1 {
+    font-size: 2rem;
+  }
+  article:nth-child(2) {
+    margin-top: 1em;
+  }
+  article:first-child p {
+    font-size: 1rem;
+  }
+  .try-free {
+    padding: 0.3em;
+  }
+}
+/* small screen */
+@media screen and (width < 400px) {
+  .try-free,
+  .agree-to-terms,
+  form {
+    width: 100%;
+  }
+  main {
+    background-image: url(./images/bg-intro-mobile.png) no-repeat;
+  }
+  section {
+    flex-direction: column;
+  }
+  article {
+    width: 100vw;
+    padding: 1em;
+  }
+  article:first-child {
+    margin-top: 1em;
+    text-align: center;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  article:first-child p {
+    font-size: 1rem;
+  }
+  .attribution {
+    padding-bottom: 1em;
+  }
+}

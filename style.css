@@ -78,6 +78,9 @@ input[type='submit'] {
   color: hsl(0, 0%, 100%);
   cursor: pointer;
 }
+article:nth-child(2) {
+  margin-top: 1em;
+}
 label {
   position: relative;
 }
